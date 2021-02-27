@@ -1,5 +1,6 @@
 # About The Project
-![dashboard](https://user-images.githubusercontent.com/31206475/109402223-736f4400-796d-11eb-9faf-d3295fcbcaed.png)![dashboard1](https://user-images.githubusercontent.com/31206475/109402222-6fdbbd00-796d-11eb-8abf-d8d25519f50a.png)
+![dashboard](https://user-images.githubusercontent.com/31206475/109402223-736f4400-796d-11eb-9faf-d3295fcbcaed.png)
+<!-- ![dashboard1](https://user-images.githubusercontent.com/31206475/109402222-6fdbbd00-796d-11eb-8abf-d8d25519f50a.png) -->
 
 **Project Stack**
 1. React js
@@ -37,6 +38,6 @@
 5. Response data stored in redux store and then cloned all data to localstorge for caching.
 6. Localstorage cache data will expire in every `2 hours`, after that will load fresh data from API.
 7. Cached data used for displaying data & avoids multiple request.
-8. Google maps displays marker for all affected countries by covid-19 & user can also search single country for getting total case count.
+8. Google maps displays marker for all affected countries by covid-19 & user can also search `single country` or `ALL` for getting total case count.
 9. Charts display different statistics data.
-10. Historical chart show number of new daily cases filtered by country.
+10. Historical chart show number of new daily cases filtered by country. 
