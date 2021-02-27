@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# About The Project
+![dashboard](https://user-images.githubusercontent.com/31206475/109402223-736f4400-796d-11eb-9faf-d3295fcbcaed.png)![dashboard1](https://user-images.githubusercontent.com/31206475/109402222-6fdbbd00-796d-11eb-8abf-d8d25519f50a.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Project Stack**
+1. React js
+2. React Router
+3. Vanilla css
+4. Google map
+5. Charts
 
-## Available Scripts
+**Description**
+* A responsive reactJS application which shows COVID-19 live update.
+* User can see number of total cases around the world.
+* Google map and charts to display data.
+* RapidAPI (free api for COVID-19)
 
-In the project directory, you can run:
+# Getting Started
 
-### `npm start`
+1. Prerequisites  
+* install `Node.js`
+* Google map key `(place inside mapContainer.js)`
+* RapidAPI token `(create account)`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Installation*
+* `git clone https://github.com/Tariqnawaz/react-redux-covid-19.git`
+* inside root folder `npm install`
+* `npm start` runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Usage
 
-### `npm test`
+![usage](https://user-images.githubusercontent.com/31206475/109402225-74a07100-796d-11eb-9c8d-0e45b4748c64.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Using api  `https://rapidapi.com/api-sports/api/covid-193`
+2. On app load fetching data from source `https://rapidapi.com/api-sports/api/covid-193` [/statistics, /history, /countries]
+3. This free api doesn't provide latitude and longitude for ploting marker on Google map, used external API for that `https://disease.sh/v3/covid-19/countries`
+4. Created `axios` instance for authentication af all requests.
+5. Response data stored in redux store and then cloned all data to localstorge for caching.
+6. Localstorage cache data will expire in every `2 hours`, after that will load fresh data from API.
+7. Cached data used for displaying data & avoids multiple request.
+8. Google maps displays marker for all affected countries by covid-19 & user can also search single country for getting total case count.
+9. Charts display different statistics data.
+10. Historical chart show number of new daily cases filtered by country.
