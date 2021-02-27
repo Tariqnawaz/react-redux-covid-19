@@ -1,0 +1,21 @@
+.app-container{
+  margin: 0 auto;
+  /* //margin-top: -15px; */
+  width: 92%;
+  background-color: #F7F6F4;
+}
+
+.header {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin-top: 0px;
+  padding-top: 5px;
+  background-color: #f6eae3;
+  color: #0d7a9c;
+  margin-bottom: 3px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(189, 174, 174, 0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(189, 174, 174, 0.75);
+    box-shadow: 3px 3px 5px 0px rgba(189, 174, 174, 0.75);
+}
+

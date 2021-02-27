@@ -1,0 +1,78 @@
+.search-container{
+    position: absolute !important;
+    top: 30px !important;
+    width: 20% !important;
+    height: 50% !important;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.search-container-chart {
+    top: 30px;
+    width: 30%;
+    height: 50%;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.search-container input, .search-container-chart input{
+    margin: 5px;
+    margin-left: 20px;
+    padding: 5px;
+    width: 80%;
+    height: 23px;    
+    border-radius: 5px;
+    outline: none;
+    font-size: 100%;
+}
+
+.auto-container{
+    background-color: rgba(4, 110, 199, 0.29);
+    width: 80%;
+    margin-left: 20px;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: normal;
+}
+
+.auto-container-chart{
+    background-color: rgba(251, 208, 171, 0.35);
+    width: 10%;
+    margin-left: 20px;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: normal;
+    position: absolute;
+    overflow: hidden;
+    height: 200px;
+    z-index: 10;
+}
+
+.options-container{
+    height: 23px;
+    border-bottom: 0.1px solid #dedede;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .search-container, .search-container-chart{
+        width: 30% !important;
+        height: 40% !important;
+    }
+    .auto-container-chart{
+        width: 21%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .search-container, .search-container-chart{
+        width: 60% !important;
+    }
+    .auto-container-chart{
+        width: 40%;
+    }
+  }
